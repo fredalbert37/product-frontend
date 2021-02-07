@@ -7,6 +7,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { ManageProductsComponent } from './components/manage-products/manage-products.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RegisterComponent } from './components/register/register.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
