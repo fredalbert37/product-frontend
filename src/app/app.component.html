@@ -6,19 +6,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Product <span class="sr-only">(current)</span></a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/products">Product <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Manage</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/manage">Manage</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto justify-content-center">
         <li class="nav-item mr-2">
-          <a class="btn btn-primary" href="#">Login</a>
+          <a class="btn btn-primary" routerLink="/login">Login</a>
         </li>
         <li class="nav-item">
-          <a class="btn btn-warning" href="#">Register</a>
+          <a class="btn btn-warning" routerLink="/register">Register</a>
         </li>
       </ul>
     </div>
