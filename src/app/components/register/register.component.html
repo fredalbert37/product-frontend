@@ -14,7 +14,7 @@
             </div>
             <div class="col-md-5">
               <label class="w-100">
-                <select [(ngModel)]="user.roles" class="custom-select" required>
+                <select [(ngModel)]="role" class="custom-select" required>
                   <option *ngFor="let rol of rols" [value]="rol.vals">{{rol.name}}</option>
                 </select>
               </label>

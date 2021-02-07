@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {AuthService} from '../../services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -10,10 +11,11 @@ export class RegisterComponent implements OnInit {
     username: '',
     email: '',
     password: '',
-    roles: 'Roles'
+    roles: Array<string>()
   };
   rols: any;
-  constructor() {
+  role: string;
+  constructor( private auth: AuthService) {
     this.rols = [
       {
         vals: 'user', name: 'Usuario'
@@ -25,12 +27,23 @@ export class RegisterComponent implements OnInit {
         vals: 'admin', name: 'Administrador'
       }
     ];
+    this.role = '';
   }
 
   ngOnInit(): void {
   }
   Register(): any {
-    console.log(this.user);
+    this.user.roles.push(this.role);
+    this.auth.signUp(this.user)
+      .subscribe(
+        (res: any) => {
+          console.log(res);
+        },
+        (err: any) => {
+          console.log(err);
+        }
+      );
+    // console.log(this.user);
   }
 
 }
